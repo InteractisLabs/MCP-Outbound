@@ -3,7 +3,7 @@
      Colócalo en assets/interactis-logo.svg — ancho ~420px.
      ════════════════════════════════════════════════════════════════ -->
 <p align="center">
-  <img src="assets/interactis-logo.png" alt="Interactis" width="420">
+  <img src="assets:interactis-logo.png" alt="Interactis" width="420">
 </p>
 
 <h1 align="center">Interactis</h1>
@@ -89,7 +89,7 @@ Agente: ✅ Llamada realizada. Estado: contestada. Duración: 28s.
      si subes el archivo al repo. Para usarlo, comenta el <img> de
      arriba y descomenta esto:
 
-  https://github.com/USUARIO/REPO/raw/main/assets/demo.mp4
+  https://github.com/USUARIO/REPO/raw/main/assets:demo.mp4
 
      (Sustituye USUARIO/REPO. En GitHub basta con arrastrar el .mp4
      al editor del README para que genere la URL automáticamente.)
