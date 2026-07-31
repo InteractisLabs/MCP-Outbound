@@ -1,9 +1,10 @@
 <!-- ══════════════════════════════════════════════════════════════
      IMAGEN (banner/logo): logotipo o wordmark de "Interactis" centrado.
-     Colócalo en assets/interactis-logo.svg — ancho ~420px.
+     Súbelo a la RAÍZ del repo con nombre EXACTO: interactis-logo.png
+     (sin carpeta, sin dos puntos, sin barra)
      ════════════════════════════════════════════════════════════════ -->
 <p align="center">
-  <img src="assets:interactis-logo.png" alt="Interactis" width="420">
+  <img src="interactis-logo.png" alt="Interactis" width="420">
 </p>
 
 <h1 align="center">Interactis</h1>
@@ -16,41 +17,75 @@
 <p align="center">
   <img src="https://img.shields.io/badge/licencia-MIT-blue" alt="Licencia MIT">
   <img src="https://img.shields.io/badge/MCP--nativo-6E56CF" alt="Nativo de MCP">
-  <img src="https://img.shields.io/badge/Telefonia_LATAM-green" alt="Telefonía LATAM">
+  <img src="https://img.shields.io/badge/-Telefon%C3%ADa%20LATAM-green" alt="Telefonía LATAM">
+  <img src="https://img.shields.io/badge/estado-beta%20temprana-orange" alt="Beta temprana">
 </p>
 
 ---
 
-**Interactis** le da a tu agente de IA la capacidad de hacer **llamadas de voz reales** y enviar **SMS** a teléfonos de verdad — directamente desde Claude Code, Cursor, ChatGPT o Gemini.
+> **Estado: beta temprana.** La conexión con Claude y las **llamadas de voz reales ya funcionan hoy** — pruébalo en [🚀 Pruébalo ahora](#-pruébalo-ahora-funciona-hoy). El resto de esta página es el rumbo del producto; lo que aún no está listo va marcado con 🔜.
 
-Sin dashboards complicados. Sin conectar Twilio + TTS + webhooks tú mismo. Solo le dices qué quieres en lenguaje natural y tu agente lo ejecuta.
+**Interactis** le da a tu agente de IA la capacidad de hacer **llamadas de voz reales** y enviar **SMS** a teléfonos de verdad — directamente desde Claude, Cursor, ChatGPT o Gemini.
+
+Sin conectar Twilio + TTS + webhooks tú mismo. Solo le dices qué quieres en lenguaje natural y tu agente lo ejecuta.
 
 ---
 
-## ¿Qué es Interactis?
+## Interactis, en 1 minuto
 
-Interactis es un **servidor MCP** (Model Context Protocol) que convierte a tu agente de IA en un comunicador real.
+<!-- ══════════════════════════════════════════════════════════════
+     VIDEO NORTH-STAR — arrastra tu demo.mp4 AQUÍ, en esta línea,
+     dentro del editor del README en GitHub. GitHub lo sube solo y
+     genera el enlace; se inserta como reproductor con controles.
+     (No uses una ruta tipo assets/... ni con dos puntos — deja que
+     el arrastre genere el enlace automáticamente.)
+     ════════════════════════════════════════════════════════════════ -->
 
-Tu agente puede:
-- Hacer llamadas de voz a cualquier número
-- Enviar SMS con confirmación de entrega
-- Registrar usuarios con verificación por OTP
 
-Todo desde tu chat de IA favorito con control total sobre lo que se dice.
+https://github.com/user-attachments/assets/1376e5b5-8707-4e11-9bbc-2f0205b22428
 
+
+
+> Esto es hacia dónde va Interactis: le hablas a tu agente y una llamada real suena en un teléfono físico. Es un video de visión, no un producto terminado — lo que ya funciona hoy está justo abajo, en [🚀 Pruébalo ahora](#-pruébalo-ahora-funciona-hoy).
+
+---
+
+## 🚀 Pruébalo ahora (funciona hoy)
+
+Interactis se conecta a **Claude** como conector personalizado (MCP). En ~2 minutos puedes hacer que Claude te llame por teléfono de verdad.
+
+1. En Claude, abre **Configuración → Conectores → Agregar conector personalizado**.
+2. Pega esta URL:
+
+   ```
+   https://api.interact.is/mcp
+   ```
+
+3. Guarda y reconecta. Las herramientas de Interactis aparecen automáticamente.
+4. **Verifica tu número.** Interactis te manda un código por SMS; dáselo a Claude para confirmar tu teléfono.
+5. Pídele a Claude que te llame:
+
+   ```
+   "Llámame y dime el clima de hoy en Monterrey."
+   ```
+
+Puedes disparar **hasta 10 llamadas reales** con el prompt que tú quieras.
 
 ```text
-Tú: "Llama al +52 81 1234 5678 y dile que su pedido ya está listo para recoger."
+Tú: "Llámame y recuérdame que tengo junta a las 4."
 
-Agente: ✅ Llamada realizada. Estado: contestada. Duración: 28s.
+Claude: ✅ Llamada realizada. Estado: contestada. Duración: 12s.
 ```
 
-<!-- Confirmar que el ejemplo de salida coincide con lo que devuelve el server:
-     ¿realmente regresa estado + duración? Ajustar a la respuesta real. -->
+<!-- Confirmar que el ejemplo de salida coincide con lo que devuelve el server. -->
 
 ---
 
-## Por qué Interactis cambia las reglas
+## La visión
+
+Todo lo que sigue es hacia dónde va Interactis. Lo que ya está vivo lleva ✅; lo que viene, 🔜.
+
+### Por qué Interactis cambia las reglas
 
 | Aspecto                    | Sin Interactis                          | Con Interactis                              |
 |---------------------------|-----------------------------------------|---------------------------------------------|
@@ -60,113 +95,64 @@ Agente: ✅ Llamada realizada. Estado: contestada. Duración: 28s.
 | **Control y seguridad**    | Riesgo de que el modelo improvise       | Tú defines el mensaje. El agente no improvisa |
 | **Integración con IA**     | Código personalizado por cada agente    | Nativo de MCP (funciona en Claude, Cursor, etc.) |
 
----
+### Características
 
-## Características principales
-
-- **📞 Llamadas de voz reales** — Tu agente marca y entrega el mensaje por voz.
-- **💬 SMS reales** — Mensajes de texto con confirmación de entrega.
-- **🔐 Registro con OTP** — Verificación de teléfono desde el primer momento.
-- **🇲🇽 Telefonía LATAM** — Entrega real a números de México y LATAM, con cobertura de carrier.
-- **🧩 Nativo de MCP** — Funciona dentro de Claude Code, Cursor, ChatGPT, Gemini y más.
-- **🛡️ Control total** — Tú defines exactamente qué se dice. El modelo no improvisa durante la llamada.
-- **📊 Resultados estructurados** — Recibes estado limpio (contestada, entregado, etc.), no transcripciones crudas.
-
----
-
-## Demo
-
-<p align="center">
-  <img src="assets/demo.gif" alt="Demo: Agente haciendo una llamada real con Interactis" width="560">
-</p>
-
-> Un agente recibe una instrucción y realiza una llamada real que suena en un teléfono físico.
-
-<!-- ══════════════════════════════════════════════════════════════
-     ALTERNATIVA (recomendada en GitHub): video en vez de GIF.
-     El MP4 pesa ~2 MB (vs ~7 MB del GIF), el texto se ve nítido y
-     trae controles de reproducción. GitHub lo renderiza como player
-     si subes el archivo al repo. Para usarlo, comenta el <img> de
-     arriba y descomenta esto:
-
-  https://github.com/USUARIO/REPO/raw/main/assets:demo.mp4
-
-     (Sustituye USUARIO/REPO. En GitHub basta con arrastrar el .mp4
-     al editor del README para que genere la URL automáticamente.)
-     ════════════════════════════════════════════════════════════════ -->
-
----
-
-## Instalación (MCP)
-
-<!-- ══════════════════════════════════════════════════════════════
-     BLOQUE DE INSTALACIÓN — PENDIENTE
-     Se completa cuando la API esté desplegada en su URL pública.
-     Definir con Jacobo: ¿remoto/hosted (type: http + url) o local (npx)?
-     No poner una URL inventada — un bloque roto mata la adopción.
-     ════════════════════════════════════════════════════════════════ -->
-
-> El bloque de configuración se publicará aquí en cuanto la API esté desplegada.
-
-```jsonc
-// Próximamente
-{
-  "mcpServers": {
-    "interactis": {
-      // ...
-    }
-  }
-}
-```
-
-Después de pegar la configuración, reinicia tu cliente MCP. Las herramientas de Interactis aparecerán automáticamente para tu agente.
-
----
-
-## Cómo usarlo
-
-Una vez conectado, solo pídele a tu agente lo que necesitas en lenguaje natural.
-
-### Ejemplos:
-
-**Llamada de voz**
-```
-"Llama al +52 81 1234 5678 y avísale que su cita de mañana quedó confirmada a las 16:00."
-```
-
-**SMS**
-```
-"Manda un SMS al +52 81 1234 5678 con el código de confirmación 4821."
-```
-
-Tu agente elige la herramienta correcta, Interactis ejecuta la acción y te devuelve el resultado de forma **estructurada**.
+- **📞 Llamadas de voz reales** ✅ — Tu agente marca y entrega el mensaje por voz.
+- **🔐 Registro con OTP** ✅ — Verificación de teléfono desde el primer momento.
+- **💬 SMS reales** 🔜 — Mensajes de texto con confirmación de entrega.
+- **🇲🇽 Telefonía LATAM** — México disponible hoy; más países 🔜.
+- **🧩 Nativo de MCP** ✅ — Funciona dentro de Claude; más clientes 🔜.
+- **🛡️ Control total** ✅ — Tú defines exactamente qué se dice. El modelo no improvisa durante la llamada.
+- **📊 Resultados estructurados** ✅ — Recibes estado limpio (contestada, entregado, etc.), no transcripciones crudas.
 
 ---
 
 ## Herramientas disponibles
 
-<!-- Confirmar con Jacobo que estos nombres coinciden exactamente con el manifest del MCP server. -->
+<!-- Confirmar con Jacobo que estos nombres coinciden exactamente con el manifest del MCP server,
+     y qué está realmente vivo hoy. Ajustar la columna Estado según eso. -->
 
-El servidor expone un conjunto enfocado y confiable de herramientas:
-
-| Herramienta            | Qué hace                                                          |
-|------------------------|------------------------------------------------------------------|
-| `register_with_otp`    | Crea cuenta y verifica el teléfono del usuario mediante código OTP |
-| `make_voice_call`      | Realiza una llamada de voz real y entrega el mensaje             |
-| `send_sms`             | Envía un SMS real con confirmación de entrega                    |
+| Herramienta            | Estado | Qué hace                                                       |
+|------------------------|:------:|----------------------------------------------------------------|
+| `register_with_otp`    |   ✅   | Crea cuenta y verifica el teléfono del usuario mediante código OTP |
+| `make_voice_call`      |   ✅   | Realiza una llamada de voz real y entrega el mensaje           |
+| `send_sms`             |   🔜   | Envía un SMS real con confirmación de entrega                  |
 
 ---
 
 ## Clientes compatibles
 
-Funciona con cualquier cliente que soporte MCP:
+Interactis usa MCP estándar, así que en principio funciona con cualquier cliente que lo soporte. Estado real de pruebas:
 
-- **Claude Code** & **Claude Desktop**
-- **Cursor**
-- **ChatGPT** (con soporte MCP)
-- **Gemini**
-- **VS Code** + extensiones compatibles
-- **Codex CLI** y otros agentes
+- **Claude** (Desktop / Code) ✅ — probado
+- **Cursor** 🔜
+- **ChatGPT** (con soporte MCP) 🔜
+- **Gemini** 🔜
+- **VS Code** + extensiones compatibles 🔜
+- **Codex CLI** y otros agentes 🔜
+
+---
+
+## Cómo usarlo
+
+Una vez conectado y verificado, solo pídele a Claude lo que necesitas en lenguaje natural.
+
+**Que te llame a ti**
+```
+"Llámame y dime el clima de hoy en Monterrey."
+```
+
+**Llamada a otro número** 🔜
+```
+"Llama al +52 81 1234 5678 y avísale que su cita de mañana quedó confirmada a las 16:00."
+```
+
+**SMS** 🔜
+```
+"Manda un SMS al +52 81 1234 5678 con el código de confirmación 4821."
+```
+
+Claude elige la herramienta correcta, Interactis ejecuta la acción y te devuelve el resultado de forma **estructurada**.
 
 ---
 
@@ -185,6 +171,8 @@ Interactis está diseñado para **casos de uso reales de negocio**, donde la pre
 
 Lo que viene después:
 
+- **Llamadas a cualquier número** — Que Claude marque a terceros, no solo a tu número verificado.
+- **SMS reales** — Envío de texto con confirmación de entrega.
 - **Guiones conversacionales acotados** — Describe el flujo completo y Interactis lo convierte en un guion con ramas limitadas (ideal para cobranza, recordatorios, encuestas).
 - **Llamadas entrantes (inbound)** — Números propios que tu agente puede contestar.
 - **Más canales** — WhatsApp, RCS y mayor cobertura en LATAM.
@@ -195,20 +183,19 @@ Lo que viene después:
 ## Solución de problemas
 
 **El agente no ve las herramientas**
-→ Revisa el bloque de configuración MCP y reinicia tu cliente.
+→ Revisa que la URL del conector sea `https://api.interact.is/mcp` y reconecta.
 
-**La llamada o SMS no llega**
-→ Verifica que el número esté en formato E.164 (`+52...`) y sea alcanzable.
+**No llega el código de verificación**
+→ Verifica que tu número esté en formato E.164 (`+52...`) y sea alcanzable.
 
-**Problemas al registrarte**
-→ Asegúrate de haber completado la verificación por OTP.
+**La llamada no llega**
+→ Confirma que completaste la verificación por OTP y que no superaste el límite de llamadas de la demo.
 
 ---
 
 ## Contribuir
 
-Las contribuciones son bienvenidas.
-Abre un issue para reportar problemas o proponer mejoras, o envía un Pull Request.
+¿Te interesa la idea? Abre un issue con tu caso de uso o feedback — en esta etapa, saber qué construir es lo más valioso. Los Pull Requests también son bienvenidos.
 
 ---
 
