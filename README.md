@@ -50,7 +50,7 @@ https://github.com/user-attachments/assets/1376e5b5-8707-4e11-9bbc-2f0205b22428
 
 ---
 
-## 🚀 Pruébalo ahora (funciona hoy)
+## 🚀 Prueba el demo ahora (Modo Sandbox)
 
 Interactis se conecta a **Claude** como conector personalizado (MCP). En ~2 minutos puedes hacer que Claude te llame por teléfono de verdad.
 
