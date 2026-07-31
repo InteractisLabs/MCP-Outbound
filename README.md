@@ -23,7 +23,7 @@
 
 ---
 
-> **Estado: beta temprana.** La conexión con Claude y las **llamadas de voz reales ya funcionan hoy** — pruébalo en [🚀 Pruébalo ahora](#-pruébalo-ahora-funciona-hoy). El resto de esta página es el rumbo del producto; lo que aún no está listo va marcado con 🔜.
+> **Estado: beta temprana.** La conexión con Claude y las **llamadas de voz reales ya funcionan hoy**. El resto de esta página es el rumbo del producto; lo que aún no está listo va marcado con 🔜.
 
 **Interactis** le da a tu agente de IA la capacidad de hacer **llamadas de voz reales** y enviar **SMS** a teléfonos de verdad — directamente desde Claude, Cursor, ChatGPT o Gemini.
 
@@ -46,8 +46,7 @@ https://github.com/user-attachments/assets/1376e5b5-8707-4e11-9bbc-2f0205b22428
 
 
 
-> Esto es hacia dónde va Interactis: le hablas a tu agente y una llamada real suena en un teléfono físico. Es un video de visión, no un producto terminado — lo que ya funciona hoy está justo abajo, en [🚀 Pruébalo ahora](#-pruébalo-ahora-funciona-hoy).
-
+> Esto es hacia dónde va Interactis: le hablas a tu agente y una llamada real suena en un teléfono físico. Es un video de visión, no un producto terminado — lo que ya funciona hoy está justo abajo.
 ---
 
 ## 🚀 Prueba el demo ahora (Modo Sandbox)
