@@ -33,18 +33,6 @@ Sin conectar Twilio + TTS + webhooks tú mismo. Solo le dices qué quieres en le
 
 ## Interactis, en 1 minuto
 
-<!-- ══════════════════════════════════════════════════════════════
-     VIDEO NORTH-STAR — arrastra tu demo.mp4 AQUÍ, en esta línea,
-     dentro del editor del README en GitHub. GitHub lo sube solo y
-     genera el enlace; se inserta como reproductor con controles.
-     (No uses una ruta tipo assets/... ni con dos puntos — deja que
-     el arrastre genere el enlace automáticamente.)
-     ════════════════════════════════════════════════════════════════ -->
-
-
-https://github.com/user-attachments/assets/1376e5b5-8707-4e11-9bbc-2f0205b22428
-
-
 
 > Esto es hacia dónde va Interactis: le hablas a tu agente y una llamada real suena en un teléfono físico. Es un video de visión, no un producto terminado — lo que ya funciona hoy está justo abajo.
 ---
